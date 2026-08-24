@@ -347,11 +347,11 @@ Before adding an E-B or E-C number to the `.tex` source:
 > cite a third model. The repo copy of that document now carries a supersession
 > banner at the top and has moved to `docs/provenance/`.
 >
-> **Figures.** There is a figure set in `figures/`, regenerated from the
-> committed artifacts by `figures/make_figures.py`, which prints the source file
-> for each panel. `figures/README.md` maps every figure to the claim it carries
-> and the caveat its caption must state. Figure 2 reports the split-half
-> correlation below.
+> **On the three caveats.** All three now have their own sections in the
+> decisions record rather than living only in caption notes: split-half is §4,
+> the null control §5, and the confidence restriction a new subsection of §2.
+> `figures/README.md` still carries them as caption guidance, and Figure 2 now
+> reports the split-half correlation alongside the same-sample one.
 >
 > **Split-half.** Done, no new inference needed. Predictor from 16 draws,
 > outcome from the disjoint 16, both assignments: Qwen +0.684 [0.103, 0.934]
@@ -359,15 +359,18 @@ Before adding an E-B or E-C number to the `.tex` source:
 > 0.807]. All four exclude zero. I have made split-half the reported estimate
 > and moved the same-sample figure to an appendix, exactly as you proposed.
 >
-> **The null control.** I could not reproduce the mechanism. Within Set A the
-> batches run ambiguous → reading_a → reading_b, so an upward drift predicts
-> batch 3 > batch 2; the observed difference is −16.5pp for Qwen and −11.5pp
-> for Llama. Drift also does not track the original batch's accuracy
-> (r = +0.05) and is only mildly concentrated early in the run. I read the
-> asymmetry as a probable fluctuation and will say so, and I will still run the
-> reversed-order Qwen control to close it. Note the reading_a/reading_b gap is
-> its own finding: E-C averages the two readings uniformly, and they are not
-> exchangeable.
+> **The null control.** The asymmetry itself is real in that sample — an exact
+> sign-flip test over the nine items that moved gives p ≈ 0.012 one-sided, which
+> agrees with your interval. What I cannot support is the inference from it to
+> Set A. Within Set A the batches run ambiguous → reading_a → reading_b, so an
+> upward drift predicts batch 3 > batch 2; the observed difference is −16.5pp
+> for Qwen and −11.5pp for Llama. Drift also does not track the original
+> batch's accuracy (r = +0.05) and is only mildly concentrated early in the run.
+> So the Set B result stands and the quarter-of-+10.05pp correction does not
+> follow from it. I read the asymmetry as a probable fluctuation, will say so,
+> and will still run the reversed-order Qwen control to close it. Note the
+> reading_a/reading_b gap is its own finding: E-C averages the two readings
+> uniformly, and they are not exchangeable.
 >
 > **Confidence.** Agreed, within-band, and I would go a step further: for Qwen
 > the variable takes two values, so I am letting the comparison against
@@ -375,11 +378,16 @@ Before adding an E-B or E-C number to the `.tex` source:
 > confidence comparison as a within-band observation only. `EC_HYPOTHESIS_SUMMARY.md`
 > stays out of the repo until it carries the same qualification.
 >
-> **The leak.** I inspected it. The simulator volunteered "Saint Etienne" from
-> its own knowledge; the rewrite never contained it, and AmbigQA disambiguates
-> by qualifier rather than by answer. The rewrite set is clean, so the
-> threshold's concern does not apply. I will report both summaries. The audit
-> stays, and I expect the rate to rise with more capable simulators.
+> **The leak.** One clarification on the protocol: it mandates the drop
+> regardless of rate — "drop any item that hits, and report the drop rate" —
+> and what the one-or-two-percent threshold triggers is inspection of the
+> *rewrite set*, on the theory that a high rate means the rewrites are
+> contaminated. So I did the inspection. The simulator volunteered "Saint
+> Etienne" from its own knowledge; the rewrite never contained it, and AmbigQA
+> disambiguates by qualifier rather than by answer. The rewrite set is clean,
+> so the threshold's concern does not apply and the drop is protocol-compliant
+> rather than a judgment call. I will report both summaries. The audit stays,
+> and I expect the rate to rise with more capable simulators.
 >
 > **Identity error.** Agreed, dropping it — it is a unit test on the estimator.
 >
