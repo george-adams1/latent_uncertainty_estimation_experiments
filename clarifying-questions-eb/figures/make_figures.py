@@ -20,6 +20,11 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from ec import split_half  # noqa: E402
+
 ROOT = Path(__file__).resolve().parent.parent
 SCAN = ROOT / "scan_results"
 OUT = Path(__file__).resolve().parent
@@ -158,19 +163,28 @@ def fig2_ec_scatter():
         grid = np.linspace(x.min(), x.max(), 2)
         ax.plot(grid, slope * grid + intercept, color=SET_A, linewidth=2, alpha=0.35, zorder=2)
 
-        s = ec_summary(slug)
-        r = s["correlations"]["setA_between_variance_vs_gain"]
-        ci = s["confidence_intervals"]["correlations"]["setA_between_variance_vs_gain"]
-        ax.annotate(f"r = {r:.2f}\n[{ci['low']:.2f}, {ci['high']:.2f}]",
-                    xy=(0.04, 0.94), xycoords="axes fraction", va="top",
-                    fontsize=8.5, color=INK_2)
+        # Split-half is the reported estimate: predictor and outcome come from
+        # disjoint halves of the same draws, so they share no sampling noise.
+        sh = split_half.analyze(str(SCAN / f"ec_{slug}_results.jsonl"))
+        a, b = sh["split_first_half_predictor"], sh["split_second_half_predictor"]
+        ax.annotate(
+            f"split-half   r = {a['r']:.2f}  [{a['low']:.2f}, {a['high']:.2f}]\n"
+            f"                  r = {b['r']:.2f}  [{b['low']:.2f}, {b['high']:.2f}]\n"
+            f"same samples r = {sh['same_samples']['r']:.2f}",
+            xy=(0.03, 0.96), xycoords="axes fraction", va="top",
+            fontsize=7.5, color=INK_2)
         ax.set_title(f"{name}   (n = {len(recs)} Set A items)", fontsize=9, color=INK,
                      loc="left", pad=8)
         ax.set_xlabel("between-reading variance")
         tidy(ax, ticks=(ax is axes[0]))
     axes[0].set_ylabel("realized clarification gain (pp)")
     fig.suptitle("Between-reading variance predicts which ambiguous items benefit from clarification",
-                 fontsize=9.5, color=INK, x=0.06, ha="left", y=1.02)
+                 fontsize=9.5, color=INK, x=0.06, ha="left", y=1.06)
+    fig.text(0.06, -0.11,
+             "Points plot the full 32-sample estimates. The reported correlation is the split-half one: "
+             "the predictor is estimated\nfrom 16 draws per prompt and the outcome from the disjoint 16, "
+             "so the two share no sampling noise. Both half-assignments are shown.",
+             fontsize=7.5, color=INK_2, ha="left")
     save(fig, "fig2_ec_between_vs_gain", "scan_results/ec_*_results.jsonl (per item) + .summary.json")
 
 
