@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# vLLM server logs (operational noise; run config is in the protocol docs
+# and the compact *_run.log files, which ARE tracked)
+scan_results/*server.log
+scan_results/*.pid
+
+# Two-item validation runs, not part of any reported analysis
+scan_results/*smoke*
+
+# Internal interpretation memo, deliberately not published
+EC_HYPOTHESIS_SUMMARY.md
+TRANSFER_MANIFEST.md
+HANDOFF.md

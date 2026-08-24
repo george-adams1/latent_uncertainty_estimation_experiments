@@ -1,0 +1,49 @@
+Loaded matched Set A: 30
+Generating train split:   0%|          | 0/87622 [00:00<?, ? examples/s]Generating train split:   1%|          | 1000/87622 [00:00<00:10, 8483.73 examples/s]Generating train split:  47%|████▋     | 41000/87622 [00:00<00:00, 216946.17 examples/s]Generating train split: 100%|██████████| 87622/87622 [00:00<00:00, 252652.80 examples/s]
+Generating validation split:   0%|          | 0/11313 [00:00<?, ? examples/s]Generating validation split: 100%|██████████| 11313/11313 [00:00<00:00, 257947.20 examples/s]
+Generating test split:   0%|          | 0/10832 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 10832/10832 [00:00<00:00, 693152.81 examples/s]
+Set B screened=4096 matched=33 target=30
+Selected matched Set B: 30
+Experiment items completed=10/60
+Experiment items completed=20/60
+Experiment items completed=30/60
+Experiment items completed=40/60
+Experiment items completed=50/60
+Experiment items completed=60/60
+{
+  "n_setA": 30,
+  "n_setB": 30,
+  "setA_accuracy": {
+    "answer_now": 0.0,
+    "oracle_clarify": 0.13333333333333333,
+    "self_ask": 0.0
+  },
+  "setB_accuracy": {
+    "answer_now": 0.2,
+    "self_ask": 0.3
+  },
+  "prediction_1_gain": {
+    "setA_oracle_gain": 0.13333333333333333,
+    "setA_selfask_gain": 0.0,
+    "setB_selfask_gain": 0.09999999999999998
+  },
+  "prediction_2_confidence_vs_gain_corr": 0.07864837576396147,
+  "prediction_3_entropy_vs_gain_corr": 0.10947567734878934,
+  "prediction_3_second_largest_vs_gain_corr": 0.2336841362038876,
+  "setA_answer_now_hedge_rate": 0.0,
+  "model": "Qwen/Qwen3-8B",
+  "setB_screened_count": 4096,
+  "setB_screened_match_count": 33,
+  "self_ask_leaks_setA": 0,
+  "free_choice_leaks_setA": 0,
+  "free_choice": {
+    "setA_ask_rate": 0.36666666666666664,
+    "setB_ask_rate": 0.4,
+    "confidence_vs_asked_corr": -0.07665142306604199,
+    "realized_gain_vs_asked_corr": -0.1386557282552304
+  },
+  "diagnostic_n": 8,
+  "elapsed_seconds": 31.715696811676025,
+  "results_path": "scan_results/full_eb_qwen3_8b_results.jsonl",
+  "setB_screen_path": "scan_results/full_eb_qwen3_8b_setb_screen.jsonl"
+}

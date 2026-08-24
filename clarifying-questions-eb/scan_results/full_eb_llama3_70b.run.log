@@ -1,0 +1,50 @@
+Loaded matched Set A: 45
+Set B screened=4096 matched=30 target=45
+Set B screened=8192 matched=62 target=45
+Selected matched Set B: 45
+Experiment items completed=10/90
+Experiment items completed=20/90
+Experiment items completed=30/90
+Experiment items completed=40/90
+Experiment items completed=50/90
+Experiment items completed=60/90
+Experiment items completed=70/90
+Experiment items completed=80/90
+Experiment items completed=90/90
+{
+  "n_setA": 45,
+  "n_setB": 45,
+  "setA_accuracy": {
+    "answer_now": 0.15555555555555556,
+    "oracle_clarify": 0.3333333333333333,
+    "self_ask": 0.26666666666666666
+  },
+  "setB_accuracy": {
+    "answer_now": 0.5111111111111111,
+    "self_ask": 0.5333333333333333
+  },
+  "prediction_1_gain": {
+    "setA_oracle_gain": 0.17777777777777776,
+    "setA_selfask_gain": 0.1111111111111111,
+    "setB_selfask_gain": 0.022222222222222254
+  },
+  "prediction_2_confidence_vs_gain_corr": -0.03541832846434776,
+  "prediction_3_entropy_vs_gain_corr": 0.09237875139595855,
+  "prediction_3_second_largest_vs_gain_corr": 0.08360199898336215,
+  "setA_answer_now_hedge_rate": 0.044444444444444446,
+  "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+  "setB_screened_count": 8192,
+  "setB_screened_match_count": 62,
+  "self_ask_leaks_setA": 1,
+  "free_choice_leaks_setA": 0,
+  "free_choice": {
+    "setA_ask_rate": 0.4,
+    "setB_ask_rate": 0.08888888888888889,
+    "confidence_vs_asked_corr": -0.07830264435477334,
+    "realized_gain_vs_asked_corr": -0.03694252895556557
+  },
+  "diagnostic_n": 8,
+  "elapsed_seconds": 48.05794048309326,
+  "results_path": "scan_results/full_eb_llama3_70b_results.jsonl",
+  "setB_screen_path": "scan_results/full_eb_llama3_70b_setb_screen.jsonl"
+}

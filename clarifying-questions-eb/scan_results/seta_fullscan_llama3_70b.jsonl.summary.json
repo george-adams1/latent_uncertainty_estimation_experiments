@@ -1,0 +1,14 @@
+{
+  "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+  "candidate_count": 2956,
+  "parsed_confidence_count": 2956,
+  "unparsed_confidence_count": 0,
+  "band": [
+    50.0,
+    60.0
+  ],
+  "matched_count": 45,
+  "matched_rate": 0.015223274695534507,
+  "elapsed_seconds": 15.95160984992981,
+  "records_path": "scan_results/seta_fullscan_llama3_70b.jsonl"
+}

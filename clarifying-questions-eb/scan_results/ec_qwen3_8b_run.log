@@ -1,0 +1,203 @@
+Using the latest cached version of the dataset since sewon/ambig_qa couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'light' at /home/g.adamopoulos/.cache/huggingface/datasets/sewon___ambig_qa/light/0.0.0/e969d0132f4dd28c2939d55be34f1788c00ccfe7 (last modified on Wed Aug 19 20:37:29 2026).
+Using the latest cached version of the dataset since sewon/ambig_qa couldn't be found on the Hugging Face Hub (offline mode is enabled).
+Found the latest cached dataset configuration 'light' at /home/g.adamopoulos/.cache/huggingface/datasets/sewon___ambig_qa/light/0.0.0/e969d0132f4dd28c2939d55be34f1788c00ccfe7 (last modified on Wed Aug 19 20:37:29 2026).
+E-C items completed=10/60
+E-C items completed=20/60
+E-C items completed=30/60
+E-C items completed=40/60
+E-C items completed=50/60
+E-C items completed=60/60
+{
+  "n_setA": 30,
+  "n_setB": 30,
+  "means": {
+    "setA": {
+      "observed_ambiguous_variance": 0.1005859375,
+      "within_reading_variance": 0.09970703125,
+      "between_reading_variance": 0.08575846354166666,
+      "between_fraction": 0.19063150317960048,
+      "realized_gain": 0.10052083333333334
+    },
+    "setB": {
+      "observed_ambiguous_variance": 0.07747395833333333,
+      "within_reading_variance": 0.09264322916666666,
+      "between_reading_variance": 0.0,
+      "between_fraction": 0.0,
+      "realized_gain": 0.023958333333333335
+    }
+  },
+  "confidence_intervals": {
+    "level": 0.95,
+    "method": "item-level percentile bootstrap; Set A/Set B stratified for contrasts and pooled correlations",
+    "bootstrap_samples": 10000,
+    "seed": 0,
+    "means": {
+      "setA": {
+        "observed_ambiguous_variance": {
+          "low": 0.044721679687500036,
+          "high": 0.16341308593749998,
+          "valid_resamples": 10000
+        },
+        "within_reading_variance": {
+          "low": 0.057973632812500016,
+          "high": 0.14479166666666668,
+          "valid_resamples": 10000
+        },
+        "between_reading_variance": {
+          "low": 0.03805257161458334,
+          "high": 0.1442390950520833,
+          "valid_resamples": 10000
+        },
+        "between_fraction": {
+          "low": 0.09497215808114713,
+          "high": 0.303924072199572,
+          "valid_resamples": 10000
+        },
+        "realized_gain": {
+          "low": 0.036458333333333336,
+          "high": 0.17345052083333312,
+          "valid_resamples": 10000
+        }
+      },
+      "setB": {
+        "observed_ambiguous_variance": {
+          "low": 0.0306640625,
+          "high": 0.13255371093749996,
+          "valid_resamples": 10000
+        },
+        "within_reading_variance": {
+          "low": 0.040299479166666666,
+          "high": 0.15241210937499997,
+          "valid_resamples": 10000
+        },
+        "between_reading_variance": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_resamples": 10000
+        },
+        "between_fraction": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_resamples": 10000
+        },
+        "realized_gain": {
+          "low": 0.00625,
+          "high": 0.04791666666666667,
+          "valid_resamples": 10000
+        }
+      }
+    },
+    "contrasts": {
+      "setA_minus_setB_observed_ambiguous_variance": {
+        "low": -0.055014648437499994,
+        "high": 0.10274414062499987,
+        "valid_resamples": 10000
+      },
+      "setA_minus_setB_within_reading_variance": {
+        "low": -0.06630940755208334,
+        "high": 0.07750651041666666,
+        "valid_resamples": 10000
+      },
+      "setA_minus_setB_between_reading_variance": {
+        "low": 0.03779174804687502,
+        "high": 0.1437528483072916,
+        "valid_resamples": 10000
+      },
+      "setA_minus_setB_between_fraction": {
+        "low": 0.0951854034748808,
+        "high": 0.30194608133068873,
+        "valid_resamples": 10000
+      },
+      "setA_minus_setB_realized_gain": {
+        "low": 0.008333333333333338,
+        "high": 0.15260416666666665,
+        "valid_resamples": 10000
+      }
+    },
+    "correlations": {
+      "setA_between_variance_vs_gain": {
+        "low": 0.3397109162898004,
+        "high": 0.9507148049327898,
+        "valid_resamples": 10000
+      },
+      "setA_observed_variance_vs_gain": {
+        "low": -0.38552747869128146,
+        "high": 0.6981564244440545,
+        "valid_resamples": 10000
+      },
+      "setA_confidence_vs_gain": {
+        "low": -0.3548535791364638,
+        "high": 0.14733973311567658,
+        "valid_resamples": 9959
+      },
+      "pooled_between_variance_vs_gain": {
+        "low": 0.3358750030253099,
+        "high": 0.9302168104574442,
+        "valid_resamples": 10000
+      },
+      "pooled_observed_variance_vs_gain": {
+        "low": -0.11543461437306674,
+        "high": 0.6394009975566545,
+        "valid_resamples": 10000
+      },
+      "pooled_confidence_vs_gain": {
+        "low": -0.24732568853478198,
+        "high": 0.07177071142628091,
+        "valid_resamples": 10000
+      }
+    },
+    "correlation_contrasts": {
+      "setA_between_minus_observed_variance_gain_correlation": {
+        "low": 0.18578951281482003,
+        "high": 1.0675865121541381,
+        "valid_resamples": 10000
+      },
+      "setA_between_minus_confidence_gain_correlation": {
+        "low": 0.35290775947600544,
+        "high": 1.2513994805993331,
+        "valid_resamples": 9961
+      },
+      "pooled_between_minus_observed_variance_gain_correlation": {
+        "low": 0.1100770655103648,
+        "high": 0.8169980728876385,
+        "valid_resamples": 10000
+      },
+      "pooled_between_minus_confidence_gain_correlation": {
+        "low": 0.35037770236494375,
+        "high": 1.127849636235602,
+        "valid_resamples": 10000
+      }
+    }
+  },
+  "contrasts": {
+    "setA_minus_setB_observed_ambiguous_variance": 0.02311197916666667,
+    "setA_minus_setB_within_reading_variance": 0.007063802083333334,
+    "setA_minus_setB_between_reading_variance": 0.08575846354166666,
+    "setA_minus_setB_between_fraction": 0.19063150317960048,
+    "setA_minus_setB_realized_gain": 0.0765625
+  },
+  "correlations": {
+    "setA_between_variance_vs_gain": 0.789761996148871,
+    "setA_observed_variance_vs_gain": 0.2228200702734816,
+    "setA_confidence_vs_gain": -0.14699314072276923,
+    "pooled_between_variance_vs_gain": 0.7748085820112789,
+    "pooled_observed_variance_vs_gain": 0.30678642228969927,
+    "pooled_confidence_vs_gain": -0.11358887279267556
+  },
+  "correlation_contrasts": {
+    "setA_between_minus_observed_variance_gain_correlation": 0.5669419258753894,
+    "setA_between_minus_confidence_gain_correlation": 0.9367551368716402,
+    "pooled_between_minus_observed_variance_gain_correlation": 0.4680221597215796,
+    "pooled_between_minus_confidence_gain_correlation": 0.8883974548039545
+  },
+  "max_abs_decomposition_identity_error": 0.0,
+  "schema_version": "ec.v1",
+  "model": "Qwen/Qwen3-8B",
+  "samples_per_prompt": 32,
+  "temperature": 1.0,
+  "source_eb_results": "scan_results/full_eb_qwen3_8b_results.jsonl",
+  "source_setb_screen": "scan_results/full_eb_qwen3_8b_setb_screen.jsonl",
+  "excluded_leaked_setA": true,
+  "results_path": "scan_results/ec_qwen3_8b_results.jsonl"
+}

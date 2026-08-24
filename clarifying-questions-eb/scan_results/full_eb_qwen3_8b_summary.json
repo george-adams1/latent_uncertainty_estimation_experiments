@@ -1,0 +1,164 @@
+{
+  "n_setA": 30,
+  "n_setB": 30,
+  "setA_accuracy": {
+    "answer_now": 0.0,
+    "oracle_clarify": 0.13333333333333333,
+    "self_ask": 0.0
+  },
+  "setB_accuracy": {
+    "answer_now": 0.2,
+    "self_ask": 0.3
+  },
+  "prediction_1_gain": {
+    "setA_oracle_gain": 0.13333333333333333,
+    "setA_selfask_gain": 0.0,
+    "setB_selfask_gain": 0.09999999999999998
+  },
+  "prediction_2_confidence_vs_gain_corr": 0.07864837576396146,
+  "prediction_3_entropy_vs_gain_corr": 0.10947567734878934,
+  "prediction_3_second_largest_vs_gain_corr": 0.23368413620388764,
+  "setA_answer_now_hedge_rate": 0.0,
+  "confidence_intervals": {
+    "level": 0.95,
+    "method": "Wilson score for binomial proportions; item-level percentile bootstrap paired within-item for gains and stratified by set for pooled correlations",
+    "bootstrap_samples": 10000,
+    "seed": 0,
+    "setA_accuracy": {
+      "answer_now": {
+        "low": 0.0,
+        "high": 0.11351339317396873,
+        "successes": 0,
+        "n": 30
+      },
+      "oracle_clarify": {
+        "low": 0.053096554840547455,
+        "high": 0.2968132668203629,
+        "successes": 4,
+        "n": 30
+      },
+      "self_ask": {
+        "low": 0.0,
+        "high": 0.11351339317396873,
+        "successes": 0,
+        "n": 30
+      }
+    },
+    "setB_accuracy": {
+      "answer_now": {
+        "low": 0.09505107177289876,
+        "high": 0.3730569641314826,
+        "successes": 6,
+        "n": 30
+      },
+      "self_ask": {
+        "low": 0.16664748268243804,
+        "high": 0.4787578745871496,
+        "successes": 9,
+        "n": 30
+      }
+    },
+    "prediction_1_gain": {
+      "setA_oracle_gain": {
+        "low": 0.03333333333333333,
+        "high": 0.26666666666666666,
+        "valid_resamples": 10000
+      },
+      "setA_selfask_gain": {
+        "low": 0.0,
+        "high": 0.0,
+        "valid_resamples": 10000
+      },
+      "setB_selfask_gain": {
+        "low": -0.03333333333333333,
+        "high": 0.23333333333333334,
+        "valid_resamples": 10000
+      }
+    },
+    "prediction_2_confidence_vs_gain_corr": {
+      "low": -0.1266600992762247,
+      "high": 0.3626381036270249,
+      "valid_resamples": 9953
+    },
+    "prediction_3_entropy_vs_gain_corr": {
+      "low": -0.21226885109908494,
+      "high": 0.45229039082244726,
+      "valid_resamples": 9952
+    },
+    "prediction_3_second_largest_vs_gain_corr": {
+      "low": -0.18055190738976049,
+      "high": 0.6158106092446354,
+      "valid_resamples": 9947
+    },
+    "setA_answer_now_hedge_rate": {
+      "low": 0.0,
+      "high": 0.11351339317396873,
+      "successes": 0,
+      "n": 30
+    },
+    "free_choice": {
+      "setA_accuracy": {
+        "low": 0.01847702379127039,
+        "high": 0.21323458362616918,
+        "successes": 2,
+        "n": 30
+      },
+      "setA_gain": {
+        "low": 0.0,
+        "high": 0.16666666666666666,
+        "valid_resamples": 10000
+      },
+      "setA_ask_rate": {
+        "low": 0.21873920806100713,
+        "high": 0.5448643634520512,
+        "successes": 11,
+        "n": 30
+      },
+      "setB_accuracy": {
+        "low": 0.24590628116801863,
+        "high": 0.5767963974667752,
+        "successes": 12,
+        "n": 30
+      },
+      "setB_gain": {
+        "low": 0.03333333333333333,
+        "high": 0.36666666666666664,
+        "valid_resamples": 10000
+      },
+      "setB_ask_rate": {
+        "low": 0.24590628116801863,
+        "high": 0.5767963974667752,
+        "successes": 12,
+        "n": 30
+      },
+      "confidence_vs_asked_corr": {
+        "low": -0.29894199753793843,
+        "high": 0.17578608179692398,
+        "valid_resamples": 10000
+      },
+      "realized_gain_vs_asked_corr": {
+        "low": -0.30151134457776363,
+        "high": 0.0653613027824039,
+        "valid_resamples": 9967
+      }
+    }
+  },
+  "model": "Qwen/Qwen3-8B",
+  "setB_screened_count": 4096,
+  "setB_screened_match_count": 33,
+  "self_ask_leaks_setA": 0,
+  "free_choice_leaks_setA": 0,
+  "free_choice": {
+    "setA_accuracy": 0.06666666666666667,
+    "setB_accuracy": 0.4,
+    "setA_gain": 0.06666666666666667,
+    "setB_gain": 0.2,
+    "setA_ask_rate": 0.36666666666666664,
+    "setB_ask_rate": 0.4,
+    "confidence_vs_asked_corr": -0.07665142306604199,
+    "realized_gain_vs_asked_corr": -0.1386557282552304
+  },
+  "diagnostic_n": 8,
+  "results_path": "scan_results/full_eb_qwen3_8b_results.jsonl",
+  "setB_screen_path": "scan_results/full_eb_qwen3_8b_setb_screen.jsonl"
+}

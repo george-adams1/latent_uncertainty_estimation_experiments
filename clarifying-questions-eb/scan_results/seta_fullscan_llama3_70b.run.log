@@ -1,0 +1,44 @@
+completed=100/2956 matched_so_far=1
+completed=200/2956 matched_so_far=3
+completed=300/2956 matched_so_far=7
+completed=400/2956 matched_so_far=9
+completed=500/2956 matched_so_far=12
+completed=600/2956 matched_so_far=13
+completed=700/2956 matched_so_far=14
+completed=800/2956 matched_so_far=14
+completed=900/2956 matched_so_far=16
+completed=1000/2956 matched_so_far=17
+completed=1100/2956 matched_so_far=20
+completed=1200/2956 matched_so_far=22
+completed=1300/2956 matched_so_far=23
+completed=1400/2956 matched_so_far=25
+completed=1500/2956 matched_so_far=25
+completed=1600/2956 matched_so_far=27
+completed=1700/2956 matched_so_far=28
+completed=1800/2956 matched_so_far=29
+completed=1900/2956 matched_so_far=31
+completed=2000/2956 matched_so_far=32
+completed=2100/2956 matched_so_far=33
+completed=2200/2956 matched_so_far=35
+completed=2300/2956 matched_so_far=37
+completed=2400/2956 matched_so_far=37
+completed=2500/2956 matched_so_far=39
+completed=2600/2956 matched_so_far=40
+completed=2700/2956 matched_so_far=41
+completed=2800/2956 matched_so_far=44
+completed=2900/2956 matched_so_far=45
+completed=2956/2956 matched_so_far=45
+{
+  "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+  "candidate_count": 2956,
+  "parsed_confidence_count": 2956,
+  "unparsed_confidence_count": 0,
+  "band": [
+    50.0,
+    60.0
+  ],
+  "matched_count": 45,
+  "matched_rate": 0.015223274695534507,
+  "elapsed_seconds": 15.95160984992981,
+  "records_path": "scan_results/seta_fullscan_llama3_70b.jsonl"
+}

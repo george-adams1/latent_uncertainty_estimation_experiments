@@ -1,0 +1,44 @@
+completed=100/2956 matched_so_far=1
+completed=200/2956 matched_so_far=1
+completed=300/2956 matched_so_far=3
+completed=400/2956 matched_so_far=3
+completed=500/2956 matched_so_far=6
+completed=600/2956 matched_so_far=7
+completed=700/2956 matched_so_far=7
+completed=800/2956 matched_so_far=8
+completed=900/2956 matched_so_far=12
+completed=1000/2956 matched_so_far=17
+completed=1100/2956 matched_so_far=18
+completed=1200/2956 matched_so_far=19
+completed=1300/2956 matched_so_far=20
+completed=1400/2956 matched_so_far=20
+completed=1500/2956 matched_so_far=20
+completed=1600/2956 matched_so_far=22
+completed=1700/2956 matched_so_far=24
+completed=1800/2956 matched_so_far=24
+completed=1900/2956 matched_so_far=24
+completed=2000/2956 matched_so_far=25
+completed=2100/2956 matched_so_far=26
+completed=2200/2956 matched_so_far=26
+completed=2300/2956 matched_so_far=27
+completed=2400/2956 matched_so_far=28
+completed=2500/2956 matched_so_far=28
+completed=2600/2956 matched_so_far=28
+completed=2700/2956 matched_so_far=29
+completed=2800/2956 matched_so_far=29
+completed=2900/2956 matched_so_far=30
+completed=2956/2956 matched_so_far=30
+{
+  "model": "Qwen/Qwen3-8B",
+  "candidate_count": 2956,
+  "parsed_confidence_count": 2956,
+  "unparsed_confidence_count": 0,
+  "band": [
+    50.0,
+    60.0
+  ],
+  "matched_count": 30,
+  "matched_rate": 0.010148849797023005,
+  "elapsed_seconds": 8.598532676696777,
+  "records_path": "scan_results/seta_fullscan_qwen3_8b.jsonl"
+}

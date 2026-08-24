@@ -1,0 +1,193 @@
+{
+  "n_setA": 44,
+  "n_setB": 45,
+  "means": {
+    "setA": {
+      "observed_ambiguous_variance": 0.07288707386363637,
+      "within_reading_variance": 0.09630237926136363,
+      "between_reading_variance": 0.18117453835227273,
+      "between_fraction": 0.3692214832818064,
+      "realized_gain": 0.12180397727272728
+    },
+    "setB": {
+      "observed_ambiguous_variance": 0.03606770833333333,
+      "within_reading_variance": 0.03259548611111111,
+      "between_reading_variance": 0.0,
+      "between_fraction": 0.0,
+      "realized_gain": 0.002777777777777778
+    }
+  },
+  "confidence_intervals": {
+    "level": 0.95,
+    "method": "item-level percentile bootstrap; Set A/Set B stratified for contrasts and pooled correlations",
+    "bootstrap_samples": 10000,
+    "seed": 0,
+    "means": {
+      "setA": {
+        "observed_ambiguous_variance": {
+          "low": 0.032670454545454544,
+          "high": 0.1185225053267045,
+          "valid_resamples": 10000
+        },
+        "within_reading_variance": {
+          "low": 0.059503173828125006,
+          "high": 0.13665383078835225,
+          "valid_resamples": 10000
+        },
+        "between_reading_variance": {
+          "low": 0.12115839177911933,
+          "high": 0.24285555752840907,
+          "valid_resamples": 10000
+        },
+        "between_fraction": {
+          "low": 0.250644935123242,
+          "high": 0.493927221801983,
+          "valid_resamples": 10000
+        },
+        "realized_gain": {
+          "low": 0.05397727272727273,
+          "high": 0.1981534090909091,
+          "valid_resamples": 10000
+        }
+      },
+      "setB": {
+        "observed_ambiguous_variance": {
+          "low": 0.006380208333333333,
+          "high": 0.0734375,
+          "valid_resamples": 10000
+        },
+        "within_reading_variance": {
+          "low": 0.007465277777777778,
+          "high": 0.06584418402777774,
+          "valid_resamples": 10000
+        },
+        "between_reading_variance": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_resamples": 10000
+        },
+        "between_fraction": {
+          "low": 0.0,
+          "high": 0.0,
+          "valid_resamples": 10000
+        },
+        "realized_gain": {
+          "low": -0.002777777777777778,
+          "high": 0.009722222222222222,
+          "valid_resamples": 10000
+        }
+      }
+    },
+    "contrasts": {
+      "setA_minus_setB_observed_ambiguous_variance": {
+        "low": -0.017339237097537843,
+        "high": 0.09150161280776514,
+        "valid_resamples": 10000
+      },
+      "setA_minus_setB_within_reading_variance": {
+        "low": 0.014453963462752527,
+        "high": 0.11373911231455175,
+        "valid_resamples": 10000
+      },
+      "setA_minus_setB_between_reading_variance": {
+        "low": 0.12133511629971594,
+        "high": 0.24138849431818182,
+        "valid_resamples": 10000
+      },
+      "setA_minus_setB_between_fraction": {
+        "low": 0.2512283878355862,
+        "high": 0.4904400191157821,
+        "valid_resamples": 10000
+      },
+      "setA_minus_setB_realized_gain": {
+        "low": 0.04973169191919192,
+        "high": 0.19502170138888889,
+        "valid_resamples": 10000
+      }
+    },
+    "correlations": {
+      "setA_between_variance_vs_gain": {
+        "low": 0.37461128338413946,
+        "high": 0.8151863596107,
+        "valid_resamples": 10000
+      },
+      "setA_observed_variance_vs_gain": {
+        "low": -0.33633134946380355,
+        "high": 0.2901978629523088,
+        "valid_resamples": 10000
+      },
+      "setA_confidence_vs_gain": {
+        "low": -0.367850277902016,
+        "high": 0.19147667555629969,
+        "valid_resamples": 10000
+      },
+      "pooled_between_variance_vs_gain": {
+        "low": 0.43716900450055163,
+        "high": 0.8375621749278807,
+        "valid_resamples": 10000
+      },
+      "pooled_observed_variance_vs_gain": {
+        "low": -0.18571299590105503,
+        "high": 0.2960309251624395,
+        "valid_resamples": 10000
+      },
+      "pooled_confidence_vs_gain": {
+        "low": -0.2431119646182954,
+        "high": 0.13256694315874,
+        "valid_resamples": 10000
+      }
+    },
+    "correlation_contrasts": {
+      "setA_between_minus_observed_variance_gain_correlation": {
+        "low": 0.31242285610781656,
+        "high": 0.9420326948144575,
+        "valid_resamples": 10000
+      },
+      "setA_between_minus_confidence_gain_correlation": {
+        "low": 0.37375602566471755,
+        "high": 1.026182056014234,
+        "valid_resamples": 10000
+      },
+      "pooled_between_minus_observed_variance_gain_correlation": {
+        "low": 0.32748350531904746,
+        "high": 0.8692317895549685,
+        "valid_resamples": 10000
+      },
+      "pooled_between_minus_confidence_gain_correlation": {
+        "low": 0.4630569456750807,
+        "high": 0.9640367198825569,
+        "valid_resamples": 10000
+      }
+    }
+  },
+  "contrasts": {
+    "setA_minus_setB_observed_ambiguous_variance": 0.03681936553030304,
+    "setA_minus_setB_within_reading_variance": 0.06370689315025252,
+    "setA_minus_setB_between_reading_variance": 0.18117453835227273,
+    "setA_minus_setB_between_fraction": 0.3692214832818064,
+    "setA_minus_setB_realized_gain": 0.1190261994949495
+  },
+  "correlations": {
+    "setA_between_variance_vs_gain": 0.6134106056292811,
+    "setA_observed_variance_vs_gain": -0.03234345308352274,
+    "setA_confidence_vs_gain": -0.11689345734027805,
+    "pooled_between_variance_vs_gain": 0.6619849967842917,
+    "pooled_observed_variance_vs_gain": 0.037267442103303496,
+    "pooled_confidence_vs_gain": -0.0761638932836528
+  },
+  "correlation_contrasts": {
+    "setA_between_minus_observed_variance_gain_correlation": 0.6457540587128038,
+    "setA_between_minus_confidence_gain_correlation": 0.7303040629695591,
+    "pooled_between_minus_observed_variance_gain_correlation": 0.6247175546809882,
+    "pooled_between_minus_confidence_gain_correlation": 0.7381488900679445
+  },
+  "max_abs_decomposition_identity_error": 0.0,
+  "schema_version": "ec.v1",
+  "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+  "samples_per_prompt": 32,
+  "temperature": 1.0,
+  "source_eb_results": "scan_results/full_eb_llama3_70b_results.jsonl",
+  "source_setb_screen": "scan_results/full_eb_llama3_70b_setb_screen.jsonl",
+  "excluded_leaked_setA": true,
+  "results_path": "scan_results/ec_llama3_70b_results.jsonl"
+}

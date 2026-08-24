@@ -1,0 +1,7 @@
+.idea/
+*.zip
+*:Zone.Identifier
+
+# Local working docs, intentionally not committed (see git history discussion)
+freeze_test/EA_HANDOFF.md
+freeze_test/coin_example_spec.md
