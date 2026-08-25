@@ -61,6 +61,9 @@ For a local OpenAI-compatible server such as vLLM, set `OPENAI_BASE_URL` to
 the server's `/v1` endpoint before using `--run`. This route does not require an
 API key.
 
+The completed Llama-3-70B run and its interpretation are documented in
+[`EA_LLAMA3_70B_RESULTS.md`](EA_LLAMA3_70B_RESULTS.md).
+
 The four dry runs are the check that matters before spending tokens: each drives
 the full pipeline against a seeded mock emitting real-format responses, and the
 scorer must recover the generating path. The `collapsed` mock is a model that
