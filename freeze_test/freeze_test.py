@@ -71,6 +71,8 @@ import os
 import re
 import sys
 import time
+import urllib.error
+import urllib.request
 from datetime import datetime, timezone
 
 import numpy as np
@@ -288,8 +290,35 @@ def call_model(prompt, model, n_samples=1, temperature=1.0, max_tokens=8):
     """Return `n_samples` raw completion strings. WIRE A REAL MODEL HERE.
 
     Kept provider-agnostic and lazily imported so the rest of this file runs on
-    numpy alone. Neither branch is exercised by --selfcheck or --dry-run.
+    numpy alone. Set OPENAI_BASE_URL to use any OpenAI-compatible local server
+    (for example vLLM); no API key is required for a local endpoint. None of
+    these branches is exercised by --selfcheck or --dry-run.
     """
+    base_url = os.environ.get("OPENAI_BASE_URL")
+    if base_url:
+        url = base_url.rstrip("/") + "/chat/completions"
+        payload = json.dumps({
+            "model": model,
+            "max_tokens": max_tokens,
+            "temperature": temperature,
+            "n": n_samples,
+            "messages": [{"role": "user", "content": prompt}],
+        }).encode("utf-8")
+        request = urllib.request.Request(
+            url,
+            data=payload,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=300) as response:
+                body = json.load(response)
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            raise RuntimeError(f"model server returned HTTP {exc.code}: {detail}") from exc
+        choices = sorted(body["choices"], key=lambda choice: choice.get("index", 0))
+        return [choice["message"].get("content") or "" for choice in choices]
+
     if model.startswith("claude"):
         try:
             import anthropic

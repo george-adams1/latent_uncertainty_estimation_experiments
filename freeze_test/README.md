@@ -57,6 +57,10 @@ python freeze_test.py --run --model MODEL --k 120     # needs a key; wires call_
 python freeze_test.py --analyze results/FILE.jsonl    # re-score, costs nothing
 ```
 
+For a local OpenAI-compatible server such as vLLM, set `OPENAI_BASE_URL` to
+the server's `/v1` endpoint before using `--run`. This route does not require an
+API key.
+
 The four dry runs are the check that matters before spending tokens: each drives
 the full pipeline against a seeded mock emitting real-format responses, and the
 scorer must recover the generating path. The `collapsed` mock is a model that

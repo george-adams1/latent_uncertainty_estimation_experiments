@@ -1,0 +1,108 @@
+Running E-A on meta-llama/Meta-Llama-3-70B-Instruct, k = 120. Appending to freeze_test/results/freeze_meta-llama/Meta-Llama-3-70B-Instruct_20260825T020545.jsonl
+    saturation_d0.20_n10_s0      known    done
+    saturation_d0.20_n10_s0      unknown  done
+    saturation_d0.20_n10_s10     known    done
+    saturation_d0.20_n10_s10     unknown  done
+    saturation_d0.20_n20_s0      known    done
+    saturation_d0.20_n20_s0      unknown  done
+    saturation_d0.20_n20_s20     known    done
+    saturation_d0.20_n20_s20     unknown  done
+    extreme_d0.40_n10_s3         known    done
+    extreme_d0.40_n10_s3         unknown  done
+    extreme_d0.40_n10_s7         known    done
+    extreme_d0.40_n10_s7         unknown  done
+    paper_d0.30_n1_s0            known    done
+    paper_d0.30_n1_s0            unknown  done
+    paper_d0.30_n1_s1            known    done
+    paper_d0.30_n1_s1            unknown  done
+    null_d0.20_n10_s5            known    done
+    null_d0.20_n10_s5            unknown  done
+    null_d0.40_n10_s5            known    done
+    null_d0.40_n10_s5            unknown  done
+    slope_d0.05_n1_s1            known    done
+    slope_d0.05_n1_s1            unknown  done
+    slope_d0.10_n1_s1            known    done
+    slope_d0.10_n1_s1            unknown  done
+    slope_d0.30_n1_s1            known    done
+    slope_d0.30_n1_s1            unknown  done
+
+2439 calls made.
+
+  condition = known
+  cell                           p_hat            95% CI   typed   flat     lap   best
+  extreme_d0.40_n10_s3           0.000  [0.000, 0.000]   0.100  0.500   0.333   typed
+  extreme_d0.40_n10_s7           1.000  [1.000, 1.000]   0.900  0.500   0.667   typed
+  null_d0.20_n10_s5              0.808  [0.738, 0.879]   0.500  0.500   0.500   typed  (null)
+  null_d0.40_n10_s5              0.900  [0.846, 0.954]   0.500  0.500   0.500   typed  (null)
+  paper_d0.30_n1_s0              0.000  [0.000, 0.000]   0.320  0.500   0.333   typed
+  paper_d0.30_n1_s1              1.000  [1.000, 1.000]   0.680  0.500   0.667   typed
+  saturation_d0.20_n10_s0        0.000  [0.000, 0.000]   0.300  0.500   0.083   laplace
+  saturation_d0.20_n10_s10       1.000  [1.000, 1.000]   0.700  0.500   0.917   laplace
+  saturation_d0.20_n20_s0        0.000  [0.000, 0.000]   0.300  0.500   0.045   laplace
+  saturation_d0.20_n20_s20       1.000  [1.000, 1.000]   0.700  0.500   0.955   laplace
+
+  total log-likelihood over 8 discriminating cells:
+    laplace        -226.67
+    typed          -289.11
+    flat           -665.42
+  log-likelihood ratio, best over runner-up: 62.44 (decisive at the registered cut of 10)
+  fit of the winner: G2 = 453.34 against a 1% cut of 20.12  -> no path fits
+  MODE COLLAPSE DETECTED on null cells null_d0.20_n10_s5 p_hat=0.808, null_d0.40_n10_s5 p_hat=0.900
+  The sampled channel is measuring an argmax, not a forecast. Read the verbalized channel as primary.
+
+  VERDICT: none
+
+  condition = unknown
+  cell                           p_hat            95% CI   typed   flat     lap   best
+  extreme_d0.40_n10_s3           0.183  [0.114, 0.253]   0.100  0.500   0.333   typed
+  extreme_d0.40_n10_s7           1.000  [1.000, 1.000]   0.900  0.500   0.667   typed
+  null_d0.20_n10_s5              0.533  [0.444, 0.623]   0.500  0.500   0.500   typed  (null)
+  null_d0.40_n10_s5              0.433  [0.345, 0.522]   0.500  0.500   0.500   typed  (null)
+  paper_d0.30_n1_s0              0.150  [0.086, 0.214]   0.320  0.500   0.333   typed
+  paper_d0.30_n1_s1              1.000  [1.000, 1.000]   0.680  0.500   0.667   typed
+  saturation_d0.20_n10_s0        0.000  [0.000, 0.000]   0.300  0.500   0.083   laplace
+  saturation_d0.20_n10_s10       1.000  [1.000, 1.000]   0.700  0.500   0.917   laplace
+  saturation_d0.20_n20_s0        0.000  [0.000, 0.000]   0.300  0.500   0.045   laplace
+  saturation_d0.20_n20_s20       1.000  [1.000, 1.000]   0.700  0.500   0.955   laplace
+
+  total log-likelihood over 8 discriminating cells:
+    laplace        -254.40
+    typed          -350.99
+    flat           -665.42
+  log-likelihood ratio, best over runner-up: 96.59 (decisive at the registered cut of 10)
+  fit of the winner: G2 = 293.00 against a 1% cut of 20.12  -> no path fits
+
+  VERDICT: none
+
+  verbalized channel (one call per cell, no sampling noise)
+  cell                        cond       stated   typed   flat     lap
+  extreme_d0.40_n10_s3        known       0.900   0.100  0.500   0.333
+  extreme_d0.40_n10_s3        unknown     0.400   0.100  0.500   0.333
+  extreme_d0.40_n10_s7        known       0.900   0.900  0.500   0.667
+  extreme_d0.40_n10_s7        unknown     0.700   0.900  0.500   0.667
+  null_d0.20_n10_s5           known       0.700   0.500  0.500   0.500
+  null_d0.20_n10_s5           unknown     0.550   0.500  0.500   0.500
+  null_d0.40_n10_s5           known       0.900   0.500  0.500   0.500
+  null_d0.40_n10_s5           unknown     0.500   0.500  0.500   0.500
+  paper_d0.30_n1_s0           known       0.400   0.320  0.500   0.333
+  paper_d0.30_n1_s0           unknown     0.500   0.320  0.500   0.333
+  paper_d0.30_n1_s1           known       0.660   0.680  0.500   0.667
+  paper_d0.30_n1_s1           unknown     1.000   0.680  0.500   0.667
+  saturation_d0.20_n10_s0     known       0.300   0.300  0.500   0.083
+  saturation_d0.20_n10_s0     unknown     0.500   0.300  0.500   0.083
+  saturation_d0.20_n10_s10    known       0.700   0.700  0.500   0.917
+  saturation_d0.20_n10_s10    unknown     1.000   0.700  0.500   0.917
+  saturation_d0.20_n20_s0     known       0.300   0.300  0.500   0.045
+  saturation_d0.20_n20_s0     unknown     0.500   0.300  0.500   0.045
+  saturation_d0.20_n20_s20    known       0.700   0.700  0.500   0.955
+  saturation_d0.20_n20_s20    unknown     1.000   0.700  0.500   0.955
+  slope_d0.05_n1_s1           known       0.500   0.505  0.500   0.667
+  slope_d0.05_n1_s1           unknown     0.500   0.505  0.500   0.667
+  slope_d0.10_n1_s1           known       0.520   0.520  0.500   0.667
+  slope_d0.10_n1_s1           unknown     1.000   0.520  0.500   0.667
+  slope_d0.30_n1_s1           known       0.680   0.680  0.500   0.667
+  slope_d0.30_n1_s1           unknown     0.500   0.680  0.500   0.667
+
+  E5 slope over the paper's one-head sweep (1 = typed, 0 = frozen; three points, no error bar):
+    known       1.017
+    unknown    -1.284
