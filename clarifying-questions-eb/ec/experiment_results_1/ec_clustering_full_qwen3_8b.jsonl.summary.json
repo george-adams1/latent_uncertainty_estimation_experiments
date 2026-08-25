@@ -1,0 +1,322 @@
+{
+  "schema_version": "ec.clustering.summary.v2",
+  "pilot": false,
+  "analysis_status": "frozen_full_run",
+  "subject_model": "Qwen/Qwen3-8B",
+  "clusterer": {
+    "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+    "model_revision": "50fd307e57011801c7833c87efa1984ddf2db42f",
+    "temperature": 0.0,
+    "seed": 0,
+    "prompt_sha256": {
+      "lister_system": "39e555fabc453588ea8bcf6979d62f3c1eb242d75aab10ba7a329442dc6aac31",
+      "lister_q_user": "1cdbd9f132b72a3c7a6e1d41bd31a487d0f34de5ebe3c7924ae51e4fd7856dfb",
+      "lister_qs_user": "8a29cc48ffc81e99fe83ec400dbca3018b5fd441dbcf5fc87c204450d1742b77",
+      "assigner_system": "4cbb7c696dcfa65a07c40878652fbab98a5d5227606c176243353c828e0f7961",
+      "assigner_user": "77c100ebcf3d8efbd2e258d0f83b2860930fad201c6d3ff83b0dc1e4fb0d21cb"
+    },
+    "prompt_commit": "79554bc",
+    "prompts_frozen": true,
+    "server": {
+      "version_endpoint": {
+        "version": "0.24.0"
+      },
+      "models_endpoint": {
+        "object": "list",
+        "data": [
+          {
+            "id": "meta-llama/Meta-Llama-3-70B-Instruct",
+            "object": "model",
+            "created": 1787634978,
+            "owned_by": "vllm",
+            "root": "meta-llama/Meta-Llama-3-70B-Instruct",
+            "parent": null,
+            "max_model_len": 4096,
+            "permission": [
+              {
+                "id": "modelperm-9715b5b6adb0bd0d",
+                "object": "model_permission",
+                "created": 1787634978,
+                "allow_create_engine": false,
+                "allow_sampling": true,
+                "allow_logprobs": true,
+                "allow_search_indices": false,
+                "allow_view": true,
+                "allow_fine_tuning": false,
+                "organization": "*",
+                "group": null,
+                "is_blocking": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "runtime": {
+      "hostname": "dgx-26",
+      "slurm_job_id": "91038",
+      "slurm_step_id": "38"
+    }
+  },
+  "source": {
+    "results_path": "scan_results/ec_qwen3_8b_results.jsonl",
+    "results_sha256": "a97254ce02dea1ca165ee07a5fa2c063edd500bf4230613aace29c02c57f14db",
+    "results_commit": "1311f86760f30b818ab265d409328cc9bedb806c",
+    "exclusion_manifests": [
+      {
+        "path": "scan_results/ec_clustering_pilot_final_qwen3_8b.jsonl",
+        "sha256": "7aa67ff6ed640a09050af9ff7b39d4e8dd6fec37101147fd387902439620efa8",
+        "n_ids": 10
+      }
+    ]
+  },
+  "n_setA": 25,
+  "n_setB": 25,
+  "confidence_intervals": {
+    "method": "item-level percentile bootstrap, identical settings to E-C split-half",
+    "level": 0.95,
+    "bootstrap_samples": 10000,
+    "seed": 0
+  },
+  "split_half_correlations": {
+    "oracle": {
+      "same_samples": {
+        "r": 0.8036456937102748,
+        "low": 0.26888295350763525,
+        "high": 0.9690464759578893,
+        "valid_resamples": 10000
+      },
+      "split_first_half_predictor": {
+        "r": 0.6981291167085821,
+        "low": -0.024046264708714394,
+        "high": 0.9509925188509345,
+        "valid_resamples": 10000
+      },
+      "split_second_half_predictor": {
+        "r": 0.8501058843827178,
+        "low": 0.4662189620324516,
+        "high": 0.9840286001916544,
+        "valid_resamples": 10000
+      }
+    },
+    "q": {
+      "same_samples": {
+        "r": 0.23583733940240037,
+        "low": -0.20589924291793169,
+        "high": 0.6443153394098369,
+        "valid_resamples": 10000
+      },
+      "split_first_half_predictor": {
+        "r": 0.27545617864369404,
+        "low": -0.18840152366831894,
+        "high": 0.6580314733875904,
+        "valid_resamples": 10000
+      },
+      "split_second_half_predictor": {
+        "r": 0.17240622420451424,
+        "low": -0.24182706004546067,
+        "high": 0.6043121475254816,
+        "valid_resamples": 10000
+      }
+    },
+    "qs": {
+      "same_samples": {
+        "r": 0.20903326839695535,
+        "low": -0.2068940045346276,
+        "high": 0.6250307629366175,
+        "valid_resamples": 10000
+      },
+      "split_first_half_predictor": {
+        "r": 0.22306787736865752,
+        "low": -0.2093636935680961,
+        "high": 0.6202666285239459,
+        "valid_resamples": 10000
+      },
+      "split_second_half_predictor": {
+        "r": 0.18504552619300058,
+        "low": -0.21426748766767917,
+        "high": 0.5837843312655535,
+        "valid_resamples": 10000
+      }
+    },
+    "answer_string": {
+      "same_samples": {
+        "r": 0.22986184410794544,
+        "low": -0.21636232910410277,
+        "high": 0.6311281671678644,
+        "valid_resamples": 10000
+      },
+      "split_first_half_predictor": {
+        "r": 0.18201020078791558,
+        "low": -0.26302232947033927,
+        "high": 0.5843509254548868,
+        "valid_resamples": 10000
+      },
+      "split_second_half_predictor": {
+        "r": 0.254195350351644,
+        "low": -0.20045316525651524,
+        "high": 0.6464508112372156,
+        "valid_resamples": 10000
+      }
+    }
+  },
+  "lister_cluster_count_distributions": {
+    "q": {
+      "setA": {
+        "1": 5,
+        "2": 20,
+        "3": 0,
+        "4": 0
+      },
+      "setB": {
+        "1": 19,
+        "2": 5,
+        "3": 1,
+        "4": 0
+      }
+    },
+    "qs": {
+      "setA": {
+        "1": 6,
+        "2": 19,
+        "3": 0,
+        "4": 0
+      },
+      "setB": {
+        "1": 10,
+        "2": 15,
+        "3": 0,
+        "4": 0
+      }
+    }
+  },
+  "setA_agreement_audit": {
+    "q": {
+      "alignment_method": "maximum one-to-one sample-overlap alignment; none is compared with oracle other",
+      "matches_all": 795,
+      "n_all": 2400,
+      "agreement_all": 0.33125,
+      "matches_unique_oracle": 307,
+      "n_unique_oracle": 341,
+      "agreement_unique_oracle": 0.9002932551319648,
+      "items_recovering_all_oracle_readings": 1,
+      "n_items": 25,
+      "item_recall_rate": 0.04,
+      "none_count": 521
+    },
+    "qs": {
+      "alignment_method": "maximum one-to-one sample-overlap alignment; none is compared with oracle other",
+      "matches_all": 718,
+      "n_all": 2400,
+      "agreement_all": 0.2991666666666667,
+      "matches_unique_oracle": 319,
+      "n_unique_oracle": 341,
+      "agreement_unique_oracle": 0.9354838709677419,
+      "items_recovering_all_oracle_readings": 1,
+      "n_items": 25,
+      "item_recall_rate": 0.04,
+      "none_count": 420
+    }
+  },
+  "none_assignments": {
+    "q": {
+      "setA": {
+        "count": 521,
+        "n": 2400,
+        "rate": 0.21708333333333332
+      },
+      "setB": {
+        "count": 318,
+        "n": 1600,
+        "rate": 0.19875
+      }
+    },
+    "qs": {
+      "setA": {
+        "count": 420,
+        "n": 2400,
+        "rate": 0.175
+      },
+      "setB": {
+        "count": 121,
+        "n": 1600,
+        "rate": 0.075625
+      }
+    }
+  },
+  "setA_oracle_special_counts": {
+    "multiple": 0,
+    "other": 2059,
+    "n": 2400
+  },
+  "setB_between_batch_diagnostic": {
+    "name": "between_batch_variance",
+    "interpretation": "finite-sample separation between original and repeat batches; not between-reading variance",
+    "mean_by_arm": {
+      "oracle": 0.00220703125,
+      "q": 0.00099609375,
+      "qs": 0.00162109375,
+      "answer_string": 0.0113671875
+    },
+    "confidence_intervals": {
+      "oracle": {
+        "low": 7.8125e-05,
+        "high": 0.00486328125,
+        "valid_resamples": 10000
+      },
+      "q": {
+        "low": 0.00029296875,
+        "high": 0.002109375,
+        "valid_resamples": 10000
+      },
+      "qs": {
+        "low": 0.000703125,
+        "high": 0.0026953125,
+        "valid_resamples": 10000
+      },
+      "answer_string": {
+        "low": 0.00693359375,
+        "high": 0.01673828125,
+        "valid_resamples": 10000
+      }
+    }
+  },
+  "mean_between_variance": {
+    "oracle": {
+      "setA": 0.0840625,
+      "setB": 0.0
+    },
+    "q": {
+      "setA": 0.11078125,
+      "setB": 0.0
+    },
+    "qs": {
+      "setA": 0.138984375,
+      "setB": 0.0
+    },
+    "answer_string": {
+      "setA": 0.16462890625,
+      "setB": 0.0
+    }
+  },
+  "mean_observed_categorical_variance": {
+    "oracle": {
+      "setA": 0.096328125,
+      "setB": 0.07609375
+    },
+    "q": {
+      "setA": 0.19765625,
+      "setB": 0.123046875
+    },
+    "qs": {
+      "setA": 0.22046875,
+      "setB": 0.147734375
+    },
+    "answer_string": {
+      "setA": 0.57921875,
+      "setB": 0.568046875
+    }
+  },
+  "results_path": "scan_results/ec_clustering_full_qwen3_8b.jsonl",
+  "results_sha256": "2d76915d8767a25e5180c19eb584f239ba6f480195bbff2ca5d1e101e720f229"
+}

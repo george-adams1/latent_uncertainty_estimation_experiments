@@ -1,0 +1,322 @@
+{
+  "schema_version": "ec.clustering.summary.v2",
+  "pilot": false,
+  "analysis_status": "frozen_full_run",
+  "subject_model": "meta-llama/Meta-Llama-3-70B-Instruct",
+  "clusterer": {
+    "model": "meta-llama/Meta-Llama-3-70B-Instruct",
+    "model_revision": "50fd307e57011801c7833c87efa1984ddf2db42f",
+    "temperature": 0.0,
+    "seed": 0,
+    "prompt_sha256": {
+      "lister_system": "39e555fabc453588ea8bcf6979d62f3c1eb242d75aab10ba7a329442dc6aac31",
+      "lister_q_user": "1cdbd9f132b72a3c7a6e1d41bd31a487d0f34de5ebe3c7924ae51e4fd7856dfb",
+      "lister_qs_user": "8a29cc48ffc81e99fe83ec400dbca3018b5fd441dbcf5fc87c204450d1742b77",
+      "assigner_system": "4cbb7c696dcfa65a07c40878652fbab98a5d5227606c176243353c828e0f7961",
+      "assigner_user": "77c100ebcf3d8efbd2e258d0f83b2860930fad201c6d3ff83b0dc1e4fb0d21cb"
+    },
+    "prompt_commit": "79554bc",
+    "prompts_frozen": true,
+    "server": {
+      "version_endpoint": {
+        "version": "0.24.0"
+      },
+      "models_endpoint": {
+        "object": "list",
+        "data": [
+          {
+            "id": "meta-llama/Meta-Llama-3-70B-Instruct",
+            "object": "model",
+            "created": 1787635082,
+            "owned_by": "vllm",
+            "root": "meta-llama/Meta-Llama-3-70B-Instruct",
+            "parent": null,
+            "max_model_len": 4096,
+            "permission": [
+              {
+                "id": "modelperm-a708f73ac112c067",
+                "object": "model_permission",
+                "created": 1787635082,
+                "allow_create_engine": false,
+                "allow_sampling": true,
+                "allow_logprobs": true,
+                "allow_search_indices": false,
+                "allow_view": true,
+                "allow_fine_tuning": false,
+                "organization": "*",
+                "group": null,
+                "is_blocking": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "runtime": {
+      "hostname": "dgx-26",
+      "slurm_job_id": "91038",
+      "slurm_step_id": "38"
+    }
+  },
+  "source": {
+    "results_path": "scan_results/ec_llama3_70b_results.jsonl",
+    "results_sha256": "b532891e98829f04395b568ba267aaae10ab69c98485ee45d44bd011788fbac8",
+    "results_commit": "1311f86760f30b818ab265d409328cc9bedb806c",
+    "exclusion_manifests": [
+      {
+        "path": "scan_results/ec_clustering_pilot_final_llama3_70b.jsonl",
+        "sha256": "dd860ad2d5b7c0b0d59401e015a7bc6b6f939107ca14afc8db258f56ce613269",
+        "n_ids": 10
+      }
+    ]
+  },
+  "n_setA": 39,
+  "n_setB": 40,
+  "confidence_intervals": {
+    "method": "item-level percentile bootstrap, identical settings to E-C split-half",
+    "level": 0.95,
+    "bootstrap_samples": 10000,
+    "seed": 0
+  },
+  "split_half_correlations": {
+    "oracle": {
+      "same_samples": {
+        "r": 0.5686623354726213,
+        "low": 0.27100847424852204,
+        "high": 0.8106812830692943,
+        "valid_resamples": 10000
+      },
+      "split_first_half_predictor": {
+        "r": 0.5336165578091582,
+        "low": 0.22437220512725817,
+        "high": 0.7819255545459535,
+        "valid_resamples": 10000
+      },
+      "split_second_half_predictor": {
+        "r": 0.5644889063489785,
+        "low": 0.2822050330514203,
+        "high": 0.8047998329307473,
+        "valid_resamples": 10000
+      }
+    },
+    "q": {
+      "same_samples": {
+        "r": 0.2984288077624296,
+        "low": -0.05961899613290615,
+        "high": 0.6231990578651788,
+        "valid_resamples": 10000
+      },
+      "split_first_half_predictor": {
+        "r": 0.2833921971001923,
+        "low": -0.06744991164559636,
+        "high": 0.6165213220823207,
+        "valid_resamples": 10000
+      },
+      "split_second_half_predictor": {
+        "r": 0.31430548266780306,
+        "low": -0.04996161294912987,
+        "high": 0.6233891126574584,
+        "valid_resamples": 10000
+      }
+    },
+    "qs": {
+      "same_samples": {
+        "r": 0.13011318778839073,
+        "low": -0.27486270381594746,
+        "high": 0.5275353934770916,
+        "valid_resamples": 10000
+      },
+      "split_first_half_predictor": {
+        "r": 0.128563257573271,
+        "low": -0.2524027403736477,
+        "high": 0.4813385844125091,
+        "valid_resamples": 10000
+      },
+      "split_second_half_predictor": {
+        "r": 0.12965957945658754,
+        "low": -0.28271509671894,
+        "high": 0.5357172954261259,
+        "valid_resamples": 10000
+      }
+    },
+    "answer_string": {
+      "same_samples": {
+        "r": 0.32083676034134184,
+        "low": 0.009124130165588818,
+        "high": 0.5863486067397893,
+        "valid_resamples": 10000
+      },
+      "split_first_half_predictor": {
+        "r": 0.324027160789876,
+        "low": 0.002677024212961199,
+        "high": 0.5904061322171461,
+        "valid_resamples": 10000
+      },
+      "split_second_half_predictor": {
+        "r": 0.299998025434815,
+        "low": -0.00857971702214568,
+        "high": 0.5671290759225884,
+        "valid_resamples": 10000
+      }
+    }
+  },
+  "lister_cluster_count_distributions": {
+    "q": {
+      "setA": {
+        "1": 19,
+        "2": 20,
+        "3": 0,
+        "4": 0
+      },
+      "setB": {
+        "1": 31,
+        "2": 9,
+        "3": 0,
+        "4": 0
+      }
+    },
+    "qs": {
+      "setA": {
+        "1": 21,
+        "2": 18,
+        "3": 0,
+        "4": 0
+      },
+      "setB": {
+        "1": 22,
+        "2": 18,
+        "3": 0,
+        "4": 0
+      }
+    }
+  },
+  "setA_agreement_audit": {
+    "q": {
+      "alignment_method": "maximum one-to-one sample-overlap alignment; none is compared with oracle other",
+      "matches_all": 1576,
+      "n_all": 3744,
+      "agreement_all": 0.42094017094017094,
+      "matches_unique_oracle": 1422,
+      "n_unique_oracle": 1648,
+      "agreement_unique_oracle": 0.8628640776699029,
+      "items_recovering_all_oracle_readings": 1,
+      "n_items": 39,
+      "item_recall_rate": 0.02564102564102564,
+      "none_count": 222
+    },
+    "qs": {
+      "alignment_method": "maximum one-to-one sample-overlap alignment; none is compared with oracle other",
+      "matches_all": 1459,
+      "n_all": 3744,
+      "agreement_all": 0.38969017094017094,
+      "matches_unique_oracle": 1379,
+      "n_unique_oracle": 1648,
+      "agreement_unique_oracle": 0.8367718446601942,
+      "items_recovering_all_oracle_readings": 1,
+      "n_items": 39,
+      "item_recall_rate": 0.02564102564102564,
+      "none_count": 155
+    }
+  },
+  "none_assignments": {
+    "q": {
+      "setA": {
+        "count": 222,
+        "n": 3744,
+        "rate": 0.05929487179487179
+      },
+      "setB": {
+        "count": 164,
+        "n": 2560,
+        "rate": 0.0640625
+      }
+    },
+    "qs": {
+      "setA": {
+        "count": 155,
+        "n": 3744,
+        "rate": 0.04139957264957265
+      },
+      "setB": {
+        "count": 134,
+        "n": 2560,
+        "rate": 0.05234375
+      }
+    }
+  },
+  "setA_oracle_special_counts": {
+    "multiple": 182,
+    "other": 1914,
+    "n": 3744
+  },
+  "setB_between_batch_diagnostic": {
+    "name": "between_batch_variance",
+    "interpretation": "finite-sample separation between original and repeat batches; not between-reading variance",
+    "mean_by_arm": {
+      "oracle": 0.0002685546875,
+      "q": 0.00087890625,
+      "qs": 0.0008056640625,
+      "answer_string": 0.0050048828125
+    },
+    "confidence_intervals": {
+      "oracle": {
+        "low": 1.220703125e-05,
+        "high": 0.0007080078125,
+        "valid_resamples": 10000
+      },
+      "q": {
+        "low": 3.662109375e-05,
+        "high": 0.0022705078125,
+        "valid_resamples": 10000
+      },
+      "qs": {
+        "low": 0.00018310546875,
+        "high": 0.00162353515625,
+        "valid_resamples": 10000
+      },
+      "answer_string": {
+        "low": 0.0024169921875,
+        "high": 0.007958984375,
+        "valid_resamples": 10000
+      }
+    }
+  },
+  "mean_between_variance": {
+    "oracle": {
+      "setA": 0.18023838141025642,
+      "setB": 0.0
+    },
+    "q": {
+      "setA": 0.07965244391025642,
+      "setB": 0.0
+    },
+    "qs": {
+      "setA": 0.09560296474358974,
+      "setB": 0.0
+    },
+    "answer_string": {
+      "setA": 0.24941155849358973,
+      "setB": 0.0
+    }
+  },
+  "mean_observed_categorical_variance": {
+    "oracle": {
+      "setA": 0.07662259615384616,
+      "setB": 0.040576171875
+    },
+    "q": {
+      "setA": 0.023587740384615384,
+      "setB": 0.0484375
+    },
+    "qs": {
+      "setA": 0.046524439102564104,
+      "setB": 0.08134765625
+    },
+    "answer_string": {
+      "setA": 0.2707832532051282,
+      "setB": 0.23955078125
+    }
+  },
+  "results_path": "scan_results/ec_clustering_full_llama3_70b.jsonl",
+  "results_sha256": "1e61e974e6db055d0cdbe581a79eef1871a48bca371934ed19acc2393d639619"
+}
