@@ -1,0 +1,7 @@
+List the plausible interpretation or interpretations of this question. First analyze the wording itself as if no samples were available. Then use the sampled answers only as supplementary evidence about possible readings. Repeated agreement among the samples does not rule out ambiguity in the wording. The samples may contain factual errors or irrelevant variation, so do not create a distinct interpretation merely to explain a different factual guess.
+
+Question (JSON string):
+{{QUESTION_JSON}}
+
+Sampled answers (JSON array of strings):
+{{SAMPLES_JSON}}

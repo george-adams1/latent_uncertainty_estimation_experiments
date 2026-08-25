@@ -1,0 +1,8 @@
+Question (JSON string):
+{{QUESTION_JSON}}
+
+Interpretations (JSON array of objects with "id" and "text"):
+{{INTERPRETATIONS_JSON}}
+
+Single answer to assign (JSON string):
+{{ANSWER_JSON}}

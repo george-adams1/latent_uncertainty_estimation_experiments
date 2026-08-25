@@ -1,0 +1,4 @@
+List the plausible interpretation or interpretations of this question.
+
+Question (JSON string):
+{{QUESTION_JSON}}

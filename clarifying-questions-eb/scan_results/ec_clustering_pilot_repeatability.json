@@ -1,0 +1,44 @@
+{
+  "schema_version": "ec.clustering.repeatability.v1",
+  "description": "Comparison of two concurrent TP8 runs with identical final prompt hashes, temperature 0, and seed 0",
+  "comparisons": {
+    "qwen3_8b_subject": {
+      "first_path": "scan_results/ec_clustering_pilot_v2_qwen3_8b.jsonl",
+      "first_sha256": "40e39444d5cbe61140902392f912d4c2e705e9cbb2e679cac3ac4257ab102308",
+      "second_path": "scan_results/ec_clustering_pilot_final_qwen3_8b.jsonl",
+      "second_sha256": "7aa67ff6ed640a09050af9ff7b39d4e8dd6fec37101147fd387902439620efa8",
+      "n_items": 10,
+      "q": {
+        "identical_lister_items": 9,
+        "assignment_labels_equal": 769,
+        "assignment_labels_total": 800,
+        "assignment_label_agreement": 0.96125
+      },
+      "qs": {
+        "identical_lister_items": 7,
+        "assignment_labels_equal": 700,
+        "assignment_labels_total": 800,
+        "assignment_label_agreement": 0.875
+      }
+    },
+    "llama3_70b_subject": {
+      "first_path": "scan_results/ec_clustering_pilot_v2_llama3_70b.jsonl",
+      "first_sha256": "25a8cd60a9906c6c42f1f53bfb2a498055bcbac82b13627b2e67e98277cee4ba",
+      "second_path": "scan_results/ec_clustering_pilot_final_llama3_70b.jsonl",
+      "second_sha256": "dd860ad2d5b7c0b0d59401e015a7bc6b6f939107ca14afc8db258f56ce613269",
+      "n_items": 10,
+      "q": {
+        "identical_lister_items": 9,
+        "assignment_labels_equal": 800,
+        "assignment_labels_total": 800,
+        "assignment_label_agreement": 1.0
+      },
+      "qs": {
+        "identical_lister_items": 7,
+        "assignment_labels_equal": 728,
+        "assignment_labels_total": 800,
+        "assignment_label_agreement": 0.91
+      }
+    }
+  }
+}
